@@ -2,10 +2,11 @@ import React from "react";
 import Cam from "../images/cam.png";
 import Add from "../images/add.png";
 import More from "../images/more.png";
-
+import Messages from "./Messages";
+import Input from "./Input";
 function Chat() {
   return (
-    <div className="chat w-[70%]">
+    <div className="chat w-[70%] ">
       <div className="chatInfo h-16 bg-slate-700 flex justify-between items-center p-4">
         <span className="text-slate-200 font-semibold text-xl">Niket</span>
         <div className="chaIcons flex items-center gap-2 ">
@@ -14,6 +15,8 @@ function Chat() {
           <img src={More} alt="More" className="cursor-pointer h-6 w-6" />
         </div>
       </div>
+      <Messages />
+      <Input />
     </div>
   );
 }
