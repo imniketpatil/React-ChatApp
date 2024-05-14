@@ -1,4 +1,6 @@
+import { signOut } from "firebase/auth";
 import React from "react";
+import { auth } from "../firebase"; // Import the auth object
 
 function Navbar() {
   return (
@@ -16,7 +18,10 @@ function Navbar() {
 
           <span className="text-slate-100 text-sm self-center	">Niket</span>
         </div>
-        <button className="text-slate-100 bg-slate-700 text-xs rounded-sm h-6 self-center px-1">
+        <button
+          className="text-slate-100 bg-slate-700 text-xs rounded-sm h-6 self-center px-1"
+          onClick={() => signOut(auth)}
+        >
           Logout
         </button>
       </div>
